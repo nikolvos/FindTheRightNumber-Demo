@@ -13,8 +13,8 @@ public class AntiCheatSystem {
         return true;
     }
 
-    public static boolean checkUsedNumbers(String s, ArrayList<Integer> Numbers) {
-        ArrayList<Integer> tools = Numbers;
+    public static boolean checkUsedNumbers(String s, ArrayList<Integer> numbers) {
+        ArrayList<Integer> tools = numbers;
         boolean key = true;
         ArrayList<Integer> usedNumbers = numberSorter(s);
         for (int i = 0; i < usedNumbers.size(); i++) {
@@ -47,7 +47,7 @@ public class AntiCheatSystem {
     }
 
     public static ArrayList<Integer> numberSorter(String s) {
-        ArrayList<Integer> Numbers = new ArrayList<>();
+        ArrayList<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < s.length(); i++) {
             StringBuilder num = new StringBuilder();
             if (Character.isDigit(s.charAt(i))) {
@@ -61,7 +61,7 @@ public class AntiCheatSystem {
                     }
                 } catch (Exception e) {}
                 int number = Integer.parseInt(num.toString());
-                Numbers.add(number);
+                numbers.add(number);
                 if (number > 99) {
                     i++;
                     i++;
@@ -70,6 +70,6 @@ public class AntiCheatSystem {
                 }
             }
         }
-        return Numbers;
+        return numbers;
     }
 }
