@@ -55,14 +55,12 @@ public class AntiCheatSystem {
             StringBuilder num = new StringBuilder();
             if (Character.isDigit(s.charAt(i))) {
                 num.append(s.charAt(i));
-                try {
-                    if (Character.isDigit(s.charAt(i + 1))) {
-                        num.append(s.charAt(i + 1));
-                        if (Character.isDigit(s.charAt(i + 2))) {
-                            num.append(s.charAt(i + 2));
-                        }
+                if (Character.isDigit(s.charAt(i + 1))) {
+                    num.append(s.charAt(i + 1));
+                    if (Character.isDigit(s.charAt(i + 2))) {
+                        num.append(s.charAt(i + 2));
                     }
-                } catch (Exception e) {}
+                }
                 int number = Integer.parseInt(num.toString());
                 numbers.add(number);
                 if (number > 99) {
