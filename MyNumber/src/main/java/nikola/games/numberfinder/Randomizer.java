@@ -3,14 +3,12 @@ package nikola.games.numberfinder;
 import java.util.ArrayList;
 import java.util.Random;
 
-
 public class Randomizer {
     public static ArrayList<Integer> giveTools() {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         for (int i = 1; i < 5; i++) {
-            int num = giveOneToTen();
-            numbers.add(num);
+            numbers.add(giveOneToTen());
         }
         numbers.add(giveFive());
         numbers.add(giveTwentyFive());

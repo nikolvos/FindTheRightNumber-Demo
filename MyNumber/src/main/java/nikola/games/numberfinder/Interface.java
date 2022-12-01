@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Interface {
     public static void menu() {
-        System.out.println("NUMBERS GAME");
+        System.out.println("Numbers Game");
         ArrayList<Integer> tools = Randomizer.giveTools();
         int goal = Randomizer.giveGoal();
-        System.out.println("USE THE FOLLOWING NUMBERS " + tools + " TO GET :" + goal);
+        System.out.println("Use the following numbers " + tools + " to get :" + goal);
         Scanner sc = new Scanner(System.in);
         String solution = sc.nextLine();
 
@@ -22,9 +22,9 @@ public class Interface {
         }
 
         if (AntiCheatSystem.checkSolution(solution, goal)) {
-            System.out.println(solution + " = " + goal + "\u001B[32m" + " CONGRATULATIONS! YOU FOUND THE SOLUTION");
+            System.out.println(solution + " = " + goal + "\u001B[32m" + " congratulations! You found the solution");
         } else {
-            System.err.println("INCORRECT, you got " + Calculator.calculate(solution) + "instead of " + goal);
+            System.err.println("Incorrect, you got " + Calculator.calculate(solution) + "instead of " + goal);
         }
     }
 }

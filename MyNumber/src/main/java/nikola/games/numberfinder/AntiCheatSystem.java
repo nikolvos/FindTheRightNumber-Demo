@@ -31,12 +31,12 @@ public class AntiCheatSystem {
                 }
                 if (remove != -1) tools.remove(remove);
             } else {
-                System.err.println("WRONG NUMBERS");
+                System.err.println("Wrong numbers");
                 key = false;
             }
         }
         if (key) {
-            System.out.println("numbers good");
+            System.out.println("Numbers good");
         }
         return key;
     }
