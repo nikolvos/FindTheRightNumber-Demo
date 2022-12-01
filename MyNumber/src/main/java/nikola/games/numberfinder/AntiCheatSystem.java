@@ -3,7 +3,10 @@ package nikola.games.numberfinder;
 import java.util.ArrayList;
 
 public class AntiCheatSystem {
-    //AntiCheatSystem checks if the solution uses only the numbers given by the randomizer, numbers cant be repeated
+    /**
+     * AntiCheatSystem checks if the solution uses only the numbers given by the
+     * randomizer, numbers cannot be repeated.
+     */
     public static boolean checkForLetters(String s) {
         for (int i = 0; i < s.length(); i++) {
             if (Character.isLetter(s.charAt(i))) {
